@@ -1,0 +1,9 @@
+<?xml version = "1.0" encoding= "UTF-8"?>
+<CATALOG>
+<CD>
+<alumno id="alumno">
+    <nombre>Eren</nombre>
+    <nacimiento> 30/marzo/835</nacimiento>
+</alumno>
+</CD>
+</CATALOG>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alumno</title>
+</head>
+<body>
+    <h1>Resultado</h1>
+    <table id="alumno"></table>
+
+
+    <script>
+        loadXMLDoc()
+
+        function loadXMLDoc() {
+            console.log("Iniciando lectura")
+          const xhttp = new XMLHttpRequest();
+          console.log(xhttp)
+          xhttp.onload = function() {
+            const xmlDoc = xhttp.responseXML;
+            console.log("xmlDoc")
+            const cd = xmlDoc.getElementsByTagName("CD");
+            //MyFunction(cd);
+            myFunction(cd);
+          }
+          xhttp.open("GET", "cd_alumno.xml");
+          xhttp.send();
+          console.log("saliendo lectura")
+        }
+            
+        function myFunction(cd) {
+          let table="<tr><th>nombre</th><th>nacimiento</th></tr>"; /* let permite definir variables*/
+          for (let i = 0; i < cd.length; i++) {
+            table += "<tr><td>" +
+            cd[i].getElementsByTagName("nombre")[0].childNodes[0].nodeValue +
+            "</td><td>" +
+            cd[i].getElementsByTagName("nacimiento")[0].childNodes[0].nodeValue +
+            "</td></tr>";
+          }
+          document.getElementById("alumno").innerHTML = table;
+        }
+    </script>
+</body>
+</html>
