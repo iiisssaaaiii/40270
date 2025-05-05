@@ -50,8 +50,16 @@
             return c
         }
 
-        const Picture = function(){
-            return "hola"
+        //const Picture = function(){
+        //    return "hola"
+        //};
+
+        //funcion anonima de tipo arrowfunction asignada a la constante Picture
+        const Picture = (id) => {
+        return `<figure>
+            <img src="https://picsum.photos/id/${id}/200/200" alt="">
+            <figcaption>John</figcaption>
+            </figure>`
         };
 
         x.innerHTML = Picture(1) + " " + Picture(2) + " " +  Picture(3)
