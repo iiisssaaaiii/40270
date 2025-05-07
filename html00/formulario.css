@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+}
+
+label{
+    display: block;
+}
+
+body{
+    text-align: center;
+}
+
+form{
+    box-shadow: 20px 30px 40px;
+    width: 300px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: gainsboro;
+    margin: auto;
+}
+
+input{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+input[type="button"], input[type="submit"]{
+    color: white;
+    background-color: rgb(30, 81, 234);
+}
